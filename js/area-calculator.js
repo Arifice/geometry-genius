@@ -7,6 +7,7 @@ function calculateTriangleArea(){
     }
     const area=.5*base*height;    
     setElementInnerText('triangle-area',area);
+    addToCalculationEntry('Triangle',area);
 }
 
 function calculateRectangleArea(){
@@ -18,6 +19,7 @@ function calculateRectangleArea(){
     }
     const area=length*height;
     setElementInnerText('rectangle-area',area);
+    addToCalculationEntry('Rectangle',area);
 }
 function calculateParallelogramArea(){
     const base=getInputValue('parallelogram-base');
@@ -25,9 +27,11 @@ function calculateParallelogramArea(){
     if(isNaN(base)||isNaN(height)){
         alert('Please input number');
         return;
-    }
+    }   
     const area=base*height;
     setElementInnerText('parallelogram-area',area);
+    addToCalculationEntry('Parallelogram',area);    
+    
 }
 function calculateRhombusleArea(){
     const length=getInputValue('first-diagonal');
@@ -38,6 +42,7 @@ function calculateRhombusleArea(){
     }
     const area=.5*length*height;
     setElementInnerText('rhombus-area',area);
+    addToCalculationEntry('Rhombus',area);
 }
 function calculatePentagonArea(){
     const perimeter=getInputValue('pentagon-perimeter');
@@ -48,6 +53,7 @@ function calculatePentagonArea(){
     }
     const area=.5*perimeter*height;
     setElementInnerText('pentagon-area',area);
+    addToCalculationEntry('Pentagon',area);
 
 }
 function calculateEllipseArea(){
@@ -60,6 +66,7 @@ function calculateEllipseArea(){
     const area=Math.PI*radious1*radious2;
     const areaTwoDecimal=area.toFixed(3);
     setElementInnerText('ellipse-area',areaTwoDecimal);
+    addToCalculationEntry('Ellipse',areaTwoDecimal);
 }
 
 function getInputValue(fieldId){    
@@ -71,4 +78,13 @@ function getInputValue(fieldId){
 function setElementInnerText(elementId,area){
     const element=document.getElementById(elementId);
     element.innerText=area;
+}
+function addToCalculationEntry(shapeType,area){
+    console.log(shapeType+ '   ' +area);
+    const calculationEntry =document.getElementById('Calaculation-entry');
+    const count=calculationEntry.childElementCount;
+    const p=document.createElement('p');
+    p.classList=('py-3');
+    p.innerHTML=`${count+1}. ${shapeType}  =  ${area} cm<sup>2</sup> <button class="btn btn-success mx-2 btn-sm">Convert</button>`
+    calculationEntry.appendChild(p);
 }
