@@ -34,7 +34,8 @@ function calculateEllipseArea(){
     const length=getInputValue('ellipse-base');
     const  height=getInputValue('ellipse-height');
     const area=Math.PI*length*height;
-    setElementInnerText('ellipse-area',area);
+    const areaTwoDecimal=area.toFixed(3);
+    setElementInnerText('ellipse-area',areaTwoDecimal);
 }
 
 function getInputValue(fieldId){    
