@@ -9,11 +9,11 @@
 </head>
 <body>
     <header>
-        <h1 class="text-6xl text-center font-black">Interactive <br> Geometry Genius</h1>
+        <h1 class="text-6xl text-center px-2 font-black">Interactive <br> Geometry Genius</h1>
     </header>
     <main class="container mx-auto my-20">
         <!-- container -->
-        <div class="flex flex-col  lg:gap-10">
+        <div class="flex flex-col gap-2 p-2 lg:gap-10">
             <!-- Shape container -->
             <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4">
                 <!-- triangle card -->
@@ -23,10 +23,10 @@
                       <h2 class="card-title">Triangle</h2>
                       <p>Area (A) = .5 x b x h</p>
                       <p>
-                        <input id="triangle-base" class="border  rounded-md w-32  text-xl    px-3 " type="text" placeholder="base">
-                        <span class="ml-2">cm</span>
-                        <input id="tirangle-height" class="ml-4  rounded-md border w-32  text-xl   px-3 " type="text" placeholder="height">
-                        <span class="ml-2">cm</span>
+                        <input id="triangle-base" class="border  rounded-md w-20  text-xl    px-1 " type="text" placeholder="base">
+                        <span class="ml-1">cm</span>
+                        <input id="tirangle-height" class="rounded-md border w-20 ml-1 text-xl   px-1 " type="text" placeholder="height">
+                        <span class="ml-1">cm</span>
                       </p> 
                       <p>
                         Area :  <span id="triangle-area" class="mx-5">0</span>cm<sup>2</sup>
@@ -43,10 +43,10 @@
                       <h2 class="card-title">Rectangle</h2>
                       <p>Area (A) = w x h </p>
                       <p>
-                        <input id="rectangle-base" class="border  rounded-md w-32  text-xl    px-3 " type="text" placeholder="base">
-                        <span class="ml-2">cm</span>
-                        <input id="rectangle-height" class="ml-4  rounded-md border w-32  text-xl   px-3 " type="text" placeholder="height">
-                        <span class="ml-2">cm</span>
+                        <input id="rectangle-base" class="border  rounded-md w-20  text-xl    px-1 " type="text" placeholder="base">
+                        <span class="ml-1">cm</span>
+                        <input id="rectangle-height" class="ml-1  rounded-md border w-20 text-xl   px-1 " type="text" placeholder="height">
+                        <span class="ml-1">cm</span>
                       </p> 
                       <p>
                         Area :  <span id="rectangle-area" class="mx-5">0</span>cm<sup>2</sup>
@@ -63,10 +63,10 @@
                       <h2 class="card-title">parallelogram</h2>
                       <p>Area (A) = b x h</p>
                       <p>
-                        <input id="parallelogram-base" class="border  rounded-md w-32 text-xl    px-3 " type="text" placeholder="base">
-                        <span class="ml-2">cm</span>
-                        <input id="parallelogram-height" class="ml-4  rounded-md border w-32 text-xl   px-3 " type="text" placeholder="height">
-                        <span class="ml-2">cm</span>
+                        <input id="parallelogram-base" class="border  rounded-md w-20 text-xl    px-1 " type="text" placeholder="base">
+                        <span class="ml-1">cm</span>
+                        <input id="parallelogram-height" class="ml-1  rounded-md border w-20 text-xl   px-1 " type="text" placeholder="height">
+                        <span class="ml-1">cm</span>
                       </p> 
                       <p>
                         Area :  <span id="parallelogram-area" class="mx-5">0</span>cm<sup>2</sup>
@@ -86,10 +86,10 @@
                       <h2 class="card-title">Rhombus</h2>
                       <p>Area (A) = .5 x d<sub>1</sub> x d<sub>2</sub></p>
                       <p>
-                        <input id="first-diagonal" class="border  rounded-md w-32  text-xl    px-3 " type="text" placeholder="diagonal">
-                        <span class="ml-2">cm</span>
-                        <input id="second-diagonal" class="ml-4  rounded-md border w-32  text-xl   px-3 " type="text" placeholder="diagonal">
-                        <span class="ml-2">cm</span>
+                        <input id="first-diagonal" class="border  rounded-md w-20  text-xl    px-1 " type="text" placeholder="diagonal">
+                        <span class="ml-1">cm</span>
+                        <input id="second-diagonal" class="ml-1  rounded-md border w-20  text-xl   px-1 " type="text" placeholder="diagonal">
+                        <span class="ml-1">cm</span>
                       </p> 
                       <p>
                         Area :  <span id="rhombus-area" class="mx-5">0</span>cm<sup>2</sup>
@@ -105,12 +105,16 @@
                     <div class="card-body">
                       <h2 class="card-title">Pentagon</h2>
                       <p>Area (A) = p x b </p>
-                      <p>
-                        <input id="pentagon-perimeter" class="border  rounded-md w-32  text-xl    px-3 " type="text" placeholder="perimeter">
-                        <span class="ml-2">cm</span>
-                        <input id="pentagon-height" class="ml-4  rounded-md border w-32  text-xl   px-3 " type="text" placeholder="height">
-                        <span class="ml-2">cm</span>
-                      </p> 
+                      <div class="flex flex-col lg:flex-row">
+                        <p>
+                            <input id="pentagon-perimeter" class="border  rounded-md w-20  text-xl    px-1 " type="text" placeholder="perimeter">
+                            <span class="ml-1">cm</span>
+                          </p> 
+                           <p>
+                            <input id="pentagon-height" class="ml-4  rounded-md border w-20  text-xl   px-1 " type="text" placeholder="height">
+                            <span class="ml-1">cm</span>
+                          </p> 
+                      </div>
                       <p>
                         Area :  <span id="pentagon-area" class="mx-5">0</span>cm<sup>2</sup>
                       </p>                    
@@ -126,10 +130,10 @@
                       <h2 class="card-title">Ellipse</h2>
                       <p>Area (A) = πab</p>
                       <p>
-                        <input id="ellipse-base" class="border  rounded-md w-32  text-xl    px-3 " type="text" placeholder="a-Axis">
-                        <span class="ml-2">cm</span>
-                        <input id="ellipse-height" class="ml-4  rounded-md border w-32  text-xl   px-3 " type="text" placeholder="b-Axis">
-                        <span class="ml-2">cm</span>
+                        <input id="ellipse-base" class="border  rounded-md w-20  text-xl    px-1 " type="text" placeholder="a-Axis">
+                        <span class="ml-1">cm</span>
+                        <input id="ellipse-height" class="ml-1  rounded-md border w-20  text-xl   px-1 " type="text" placeholder="b-Axis">
+                        <span class="ml-1">cm</span>
                       </p> 
                       <p>
                         Area :  <span id="ellipse-area" class="mx-5">0</span>cm<sup>2</sup>
